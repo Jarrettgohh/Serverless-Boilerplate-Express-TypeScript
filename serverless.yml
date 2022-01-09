@@ -32,7 +32,7 @@ provider:
 
 functions:
   app:
-    handler: src/handler.handler
+    handler: src/index.handler
     # reservedConcurrency: 100
     events:
       - httpApi:

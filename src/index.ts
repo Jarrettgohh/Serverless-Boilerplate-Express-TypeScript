@@ -12,6 +12,11 @@ app.get('/', (_, res) =>
   })
 );
 
+app.get('/test',(_,res)=>res.json({
+
+  python:'c++'
+}))
+
 app.use((_, res, _2) => {
   res.status(404).json({ error: 'NOT FOUND' });
 });
