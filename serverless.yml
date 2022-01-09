@@ -2,15 +2,15 @@ org: jarrettmapitin
 app: serverless-express-typescript
 service: serverless-express-typescript
 
-stage: prod
-region: ap-southeast-1
-
-bundle:
-  linting: false
+custom:
+  bundle:
+    linting: false
 
 provider:
   name: aws
   runtime: nodejs14.x
+  stage: dev
+  region: ap-southeast-1
   lambdaHashingVersion: 20201221 # https://www.serverless.com/framework/docs/deprecations/#LAMBDA_HASHING_VERSION_V2
 
 functions:
