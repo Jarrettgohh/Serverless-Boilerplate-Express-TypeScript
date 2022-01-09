@@ -1,13 +1,12 @@
 org: jarrettmapitin
-app: mapitin
+app: serverless-express-typescript
 service: serverless-express-typescript
 
-custom:
-  stage: prod
-  region: ap-southeast-1
+stage: prod
+region: ap-southeast-1
 
-  bundle:
-    linting: false
+bundle:
+  linting: false
 
 provider:
   name: aws
