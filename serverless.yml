@@ -20,15 +20,15 @@ custom:
 provider:
   name: aws
   runtime: nodejs14.x
-  memorySize: 512
-  timeout: 10
-  logRetentionInDays: 90
+  # memorySize: 512
+  # timeout: 10
+  # logRetentionInDays: 90
   lambdaHashingVersion: 20201221 # https://www.serverless.com/framework/docs/deprecations/#LAMBDA_HASHING_VERSION_V2
-  logs:
-    httpApi: true
-  httpApi:
-    # metrics: true # Enable if you need
-    cors: true
+  # logs:
+  #   httpApi: true
+  # httpApi:
+  #   # metrics: true # Enable if you need
+  #   cors: true
 
 functions:
   app:
