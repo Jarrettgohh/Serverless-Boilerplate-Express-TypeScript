@@ -1,24 +1,25 @@
-import express, { json } from 'express';
-import helmet from 'helmet';
-import serverlessHttp from 'serverless-http';
+import express, { json } from "express";
+import helmet from "helmet";
+import serverlessHttp from "serverless-http";
 
 const app = express();
 app.use(json());
 app.use(helmet());
 
-app.get('/', (_, res) =>
+app.get("/", (_, res) =>
   res.json({
-    msg: 'Hello World',
+    msg: "Hello World",
   })
 );
 
-app.get('/test',(_,res)=>res.json({
-
-  python:'c++'
-}))
+app.get("/test", (_, res) =>
+  res.json({
+    " c++": "python",
+  })
+);
 
 app.use((_, res, _2) => {
-  res.status(404).json({ error: 'NOT FOUND' });
+  res.status(404).json({ error: "NOT FOUND" });
 });
 
 export const handler = serverlessHttp(app);
